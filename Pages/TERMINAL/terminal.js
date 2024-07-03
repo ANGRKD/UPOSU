@@ -125,7 +125,7 @@
 
             else if (input.toLowerCase() === 'who are you?') {
             //Audio object ---------------------------
-            let audio = new Audio('./../Audio/WAY Voice.mp3');
+            let audio = new Audio('../../Audio/WAY Voice.mp3');
             audio.play();
             // -----------------------------------------
 
