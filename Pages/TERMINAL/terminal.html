@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ŮPOSŮ </title>
+    <link rel="icon" type="image/png" href="../Images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Fira Code", monospace;
+            margin: 0px;
+            height: 100hv;
+
+        }
+
+        .terminal {
+            width: 80%;
+            font-size: 17px;
+            max-width: 550px;
+            margin-left: 20px;
+    
+        }
+
+        #input-line {
+            display: inline;
+        }
+
+        .blinking-cursor {
+            font-weight: bolder;
+            font-size: 15px;
+            color: white;
+            animation: blink 0.5s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .results {
+            font-size: 40px;
+            color: white;
+        }
+
+        .LogoFront{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+
+
+        .cookie-consent {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            padding: 15px;
+            box-shadow: 0 0 50px rgba(253, 253, 253, 0.445);
+            z-index: 1000;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .cookie-consent button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+
+        }
+        .cookie-consent {
+            display: none;
+        }
+        .show {
+            display: block !important;
+     }
+
+
+
+     /* TEST */
+
+
+        #acceptCookiesButton {
+
+            position: relative;
+        }
+
+        #acceptCookiesButton::after {
+            content: "_ALLOW ACCESS";
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity;
+        }
+
+        #acceptCookiesButton:hover::after {
+            opacity: 1;
+        }
+
+        #acceptCookiesButton:hover {
+            color: transparent;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <br>
+    <div class="terminal">
+        <div id="output"></div>
+        <div id="input-container" style="display: none;">
+        <span id="input-line"></span><span class="blinking-cursor">|</span>
+        </div>
+    </div>
+
+    <script src="terminal.js"></script>
+
+    <img class="LogoFront" src="../Images/Logo.png" height="100"> 
+
+
+
+    <div id="cookieConsentPopup" class="cookie-consent">
+        <p>DO YOU AUTHORIZE<b> ŮPOSŮ </b>TO USE YOUR IDENTITY, LIKENESS AND/OR PERSONAL BELONGINGS ?</p>
+        
+        <button id="acceptCookiesButton">_DENY ACCESS</button>
+    </div>
+
+
+</body>
+</html>

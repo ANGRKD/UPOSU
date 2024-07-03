@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ŮPOSŮ </title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        a {
+            font-family: "Fira Code", monospace;
+            color: white;
+            font-size: 4em;
+            text-decoration: none;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.589);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.589);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.589);
+            }
+        }
+        a:hover {
+            animation: none;
+            font-size: 4.2em;
+            transition: ease-in-out;
+            cursor: pointer;
+            animation: blink 2s infinite;
+
+        }
+    </style>
+
+
+</head>
+<body>
+    <a id="enter" href="terminal.html" onmouseover="playSound()">ACCESS TERMINAL</a>
+    <audio id="clicksound" preload="auto" src="./Audio/HOV sound.mp3"></audio>
+
+    <script>
+        function playSound() {
+            var sound = document.getElementById("clicksound");
+            sound.pause();
+            sound.currentTime = 0;
+            sound.play();
+        }
+    </script>
+</body>
+</html>

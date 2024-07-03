@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_MIND READER</title>
+    <link rel="stylesheet" href="mindreaderstyle.css">
+     <link rel="icon" type="image/png" href="../Images/favicon.png">
+</head>
+
+<body>
+
+    <video id="MindReaderVideo" autoplay controls>
+        <source src="MIND READER (VISUALIZER).mp4" width="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <script>
+
+        function updateURL(newURL) {
+            if (history.pushState) {
+                const newState = { additionalInformation: 'MINDREADER' };
+                history.pushState(newState, 'New Title', newURL);
+            } else {
+                console.warn('History API is not supported');
+            }
+        }
+        updateURL('/MINDREADER');
+
+    </script>
+
+</body>
+</html>
