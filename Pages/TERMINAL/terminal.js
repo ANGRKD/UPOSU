@@ -46,7 +46,7 @@
             if (input.toLowerCase() === 'hello') {
 
             //LOADING SOUND -------------------------------------------------------------------
-            let audio = new Audio('.../Audio/LOAD sound.mp3');
+            let audio = new Audio('../../Audio/LOAD sound.mp3');
             audio.play();
             // --------------------------------------------------------------------------------
                 
@@ -55,7 +55,7 @@
                     let popupWidth = 1200;
                     let popupHeight = 600;
 
-                    window.open("../Pages/hello.html", "PopupWindow", `width=${popupWidth},height=${popupHeight}, left=2500,top= 150`);
+                    window.open("../../Pages/hello.html", "PopupWindow", `width=${popupWidth},height=${popupHeight}, left=2500,top= 150`);
                 }, 3000);
 
                 
@@ -73,7 +73,7 @@
 
 
             //REQ SOUND -----------------------------------------------------------------------
-            let audio = new Audio('.../Audio/REQ sound.mp3');
+            let audio = new Audio('../../Audio/REQ sound.mp3');
             audio.play();
             // --------------------------------------------------------------------------------
 
@@ -86,7 +86,7 @@
             } 
             else if (input.toLowerCase() === 'mind reader') {
                     //LOADING SOUND -------------------------------------------------------------------
-                    let audio = new Audio('.../Audio/LOAD sound.mp3');
+                    let audio = new Audio('../../Audio/LOAD sound.mp3');
                     audio.play();
                     // --------------------------------------------------------------------------------
                 clearMessage(() => {
@@ -97,7 +97,7 @@
                 });
                 typeMessage('LOADING . . .',() => {
 
-                    let audio = new Audio('.../Audio/MIND sound.mp3');
+                    let audio = new Audio('../../Audio/MIND sound.mp3');
                     audio.play();
 
                     })
@@ -106,7 +106,7 @@
                         clearMessage(() => {
                             typeMessage('_ACCESS GRANTED:', showPrompt);
                     //REQ SOUND -----------------------------------------------------------------------
-                    let audio = new Audio('.../Audio/REQ sound.mp3');
+                    let audio = new Audio('../../Audio/REQ sound.mp3');
                     audio.play();
                     // --------------------------------------------------------------------------------
                         });
@@ -117,7 +117,7 @@
                     let popupWidth = 1200;
                     let popupHeight = 600;
 
-                    window.open("../Pages/mindreader.html", "PopupWindow", `width=${popupWidth},height=${popupHeight}, left= 2200,top= 150`);
+                    window.open("../../Pages/MIND READER/mindreader.html", "PopupWindow", `width=${popupWidth},height=${popupHeight}, left= 2200,top= 150`);
                 }, 3000);
             }
 
@@ -125,7 +125,7 @@
 
             else if (input.toLowerCase() === 'who are you?') {
             //Audio object ---------------------------
-            let audio = new Audio('.../Audio/WAY Voice.mp3');
+            let audio = new Audio('./../Audio/WAY Voice.mp3');
             audio.play();
             // -----------------------------------------
 
@@ -151,7 +151,7 @@
         else if (input.toLowerCase() === 'help') {
 
             //Audio object ---------------------------
-            let audio = new Audio('.../Audio/Help Voice.mp3');
+            let audio = new Audio('../../Audio/Help Voice.mp3');
             audio.play();
             // -----------------------------------------
 
@@ -178,7 +178,7 @@
 
 
             //REQ SOUND -----------------------------------------------------------------------
-            let audio = new Audio('.../Audio/ERR sound.mp3');
+            let audio = new Audio('../../Audio/ERR sound.mp3');
             audio.play();
             // --------------------------------------------------------------------------------
             }
@@ -212,7 +212,7 @@
 
 setTimeout(() => {
 
-    let audio = new Audio('.../Audio/LOAD sound.mp3');
+    let audio = new Audio('../../Audio/LOAD sound.mp3');
     audio.addEventListener('canplaythrough', function() {
      audio.play();
     }, false);
@@ -227,7 +227,7 @@ setTimeout(() => {
 
             setTimeout(() => {
 
-                let audio = new Audio('.../Audio/COMP sound.mp3');
+                let audio = new Audio('../../Audio/COMP sound.mp3');
                 audio.play();
 
                 clearMessage(() =>{
@@ -238,7 +238,7 @@ setTimeout(() => {
 
             setTimeout(() => {
 
-                let audio = new Audio('.../Audio/REQ sound.mp3');
+                let audio = new Audio('../../Audio/REQ sound.mp3');
                 audio.play();
 
                 clearMessage(() => {
